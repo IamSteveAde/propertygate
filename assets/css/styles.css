@@ -1,0 +1,180 @@
+.nebula-core {
+  background: linear-gradient(to bottom right, #fefefe, #f8f8f8);
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.vortex-container {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideIn 1s ease-out;
+}
+
+.glare-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.glare-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80px;
+  margin: 12px auto 0;
+  background: #ff9800;
+  transition: all 0.3s ease;
+}
+
+.glare-title:hover::after {
+  width: 120px;
+  background: #ffa733;
+}
+
+.pulse-paragraph {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 45px;
+  line-height: 1.6;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fancy button */
+.quantum-glow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 153, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 153, 0, 0.3);
+  color: #ff9900;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-glow-btn:hover {
+  background: rgba(255, 153, 0, 0.25);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(255, 153, 0, 0.4);
+}
+
+.quantum-glow-btn .star-icon {
+  transition: transform 0.3s ease;
+}
+
+.quantum-glow-btn:hover .star-icon {
+  transform: rotate(90deg) scale(1.2);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.faq-capsule {
+  background: #fdfdfd;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+.faq-center {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+  color: #111;
+}
+
+.faq-box {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-box:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.faq-question:hover {
+  background: #f7f7f7;
+}
+
+.faq-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: #fafafa;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.faq-box.open .faq-answer {
+  padding: 20px 24px;
+  max-height: 500px;
+}
+
+.faq-box.open .faq-icon {
+  transform: rotate(45deg);
+}
+.pattern-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/img/pattern.png'); /* Make sure the path is correct */
+  background-repeat: no-repeat;
+  background-size: contain; /* or 'cover' if you want full stretch */
+  z-index: -1;
+  pointer-events: none; /* Prevents it from blocking clicks */
+  background-position: center;
+  opacity: 0.3; /* Makes sure it's subtle behind content */
+}
